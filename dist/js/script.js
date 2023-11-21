@@ -45,31 +45,27 @@ darkToggle.addEventListener("click", function () {
     localStorage.theme = "light";
   }
 });
-
-//Animasi Teks
-const text = "I'm Yusuf Maulana"; // Teks yang akan diketik
-const speed = 300; // Kecepatan pengetikan (dalam milidetik)
-let index = 0;
-
-function typeWriter() {
-  const typedTextElement = document.getElementById("typedText");
-  const placeholderElement = document.querySelector(".placeholder");
-
-  if (index < text.length) {
-    typedTextElement.innerHTML += text.charAt(index);
-    index++;
-  } else {
-    index = 0;
-    typedTextElement.innerHTML = "";
-  }
-}
-
-// Memulai animasi pengetikan
-setInterval(typeWriter, speed);
-
 //pindahkan posisi toggle sesuai mode
 if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
   darkToggle.checked = true;
 } else {
   darkToggle.checked = false;
 }
+
+// Dapatkan elemen yang ingin Anda atur warnanya
+const textElement = document.getElementById("input");
+
+// Fungsi untuk mengubah warna teks sesuai mode
+function setTextColor(darkMode) {
+  if (darkMode) {
+    textElement.style.color = "lightgray"; // Ubah ke warna light saat mode dark aktif
+  } else {
+    textElement.style.color = "black"; // Ubah ke warna dark saat mode light aktif
+  }
+}
+
+// Contoh penggunaan: saat mode dark aktif
+setTextColor(true); // Panggil fungsi dengan parameter true jika mode dark aktif
+
+// Contoh penggunaan: saat mode light aktif
+setTextColor(false); // Panggil fungsi dengan parameter false jika mode light aktif
