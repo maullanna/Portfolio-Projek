@@ -52,20 +52,3 @@ if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.match
   darkToggle.checked = false;
 }
 
-// Dapatkan elemen yang ingin Anda atur warnanya
-const textElement = document.getElementById("input");
-
-// Fungsi untuk mengubah warna teks sesuai mode
-function setTextColor(darkMode) {
-  if (darkMode) {
-    textElement.style.color = "lightgray"; // Ubah ke warna light saat mode dark aktif
-  } else {
-    textElement.style.color = "black"; // Ubah ke warna dark saat mode light aktif
-  }
-}
-
-// Contoh penggunaan: saat mode dark aktif
-setTextColor(true); // Panggil fungsi dengan parameter true jika mode dark aktif
-
-// Contoh penggunaan: saat mode light aktif
-setTextColor(false); // Panggil fungsi dengan parameter false jika mode light aktif
