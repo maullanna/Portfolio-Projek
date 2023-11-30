@@ -108,6 +108,73 @@
         transition: background 0.5s;
         background-color: #29ca72;
       }
+
+      /* Style Dasar Link */
+      .vibrate-link {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #ffffff;
+        border: 2px solid #34d399;
+        border-radius: 15px;
+        background-color: #34d399;
+        font-size: 1rem;
+        box-shadow: 2px 5px #adadad;
+        animation: vibrate 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+        animation-delay: 0.7s; /*Delay sebelum animasi dimulai */
+      }
+
+      /* Animasi Bergetar */
+
+      @keyframes vibrate {
+        0% {
+          transform: translate(0);
+        }
+        10% {
+          transform: translate(-1px, 1px) rotate(-2deg);
+        }
+        20% {
+          transform: translate(1px, -2px) rotate(2deg);
+        }
+        30% {
+          transform: translate(-3px, 0) rotate(0);
+        }
+        40% {
+          transform: translate(3px, 2px) rotate(1deg);
+        }
+        50% {
+          transform: translate(-1px, -1px) rotate(1deg);
+        }
+        60% {
+          transform: translate(2px, 1px) rotate(-1deg);
+        }
+        70% {
+          transform: translate(-1px, 2px) rotate(0);
+        }
+        80% {
+          transform: translate(1px, -1px) rotate(-1deg);
+        }
+        90% {
+          transform: translate(0, 3px) rotate(2deg);
+        }
+        100% {
+          transform: translate(0);
+        }
+      }
+
+      .kotak {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        margin: 50px auto;
+        display: flex;
+      }
+
+      .kotak h3 {
+        margin: auto;
+        font-size: 2em;
+      }
     </style>
   </head>
   <body>
@@ -168,7 +235,7 @@
     </header>
     <!-- Header End -->
 
-    <!-- Hero Section Start 
+    <!-- Hero Section Start -->
     <section id="home" class="pt-36 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
@@ -177,25 +244,16 @@
             <h1 class="text-base font-semibold text-primary md:text-xl">Hallo Semua 😊 | <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white">I'm Yusuf Maulana</span></h1>
             <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Teacher & <span class="text-dark dark:text-white inline-block animate-fadeIn animate-fadeOut infinite duration-300">Web Developer</span></h2>
             <p class="font-medium text-secondary mb-10 leading-relaxed">Quotes <span class="text-emerald-400" id="input" style="color: rgb(52 211 153 / var(--tw-text-opacity)); --tw-text-opacity: 1"></span></p>
-            <a href="https://whatsapp.com/" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 duration-300 ease-in-out">Hubungi Saya</a>
+            <a href="http://wa.me/6285694743168" class="vibrate-link">Hubungi Saya</a>
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
-            <div class="relative mt-10 lg:mt-9 lg:right-0">
-              <img src="dist/img/Yusuf.png.png" alt="Yusuf" class="relative z-10 max-w-full mx-auto" style="border-radius: 40px" />
-              <span class="absolute -bottom-20 left-1/2 -translate-x-1/2 md:scale-100">
-                <svg width="550" height="800" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fill="#10b981"
-                    d="M59.8,-17.5C67.4,4.1,56.7,33.6,34.3,50.7C12,67.7,-21.8,72.2,-43.4,57.1C-65,42.1,-74.3,7.5,-65,-16.5C-55.7,-40.4,-27.9,-53.6,-0.9,-53.3C26.1,-53,52.1,-39.2,59.8,-17.5Z"
-                    transform="translate(100 100) "
-                  />
-                </svg>
-              </span>
+            <div class="relative mt-10">
+              <img src="dist/img/Yusuf.png.png" alt="yusuf" class="max-w-full mx-auto" style="border-radius: 15px" />
             </div>
           </div>
         </div>
       </div>
-    </section>-->
+    </section>
     <!-- Hero Section end -->
 
     <!-- About section start-->
@@ -354,7 +412,14 @@
         </div>
       </div>
     </section>
-    <!-- clients start -->
+    <!-- clients end-->
+
+    <!-- VANILLA TILIT START -->
+
+    <div class="kotak" data-tilt>
+      <h3>tulisan</h3>
+    </div>
+    <!-- VANILLA TILIT END -->
     <!-- blog section start -->
     <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
       <div class="container">
@@ -556,7 +621,7 @@
     </footer>
     <!-- Footer End -->
     <!-- back to top start -->
-    <a href="#about" class="fixed bottom-4 right-4 z-[9999] hidden justify-center items-center h-14 w-14 bg-primary rounded-full p-4 hover:animate-pulse" id="to-top">
+    <a href="#home" class="fixed bottom-4 right-4 z-[9999] hidden justify-center items-center h-14 w-14 bg-primary rounded-full p-4 hover:animate-pulse" id="to-top">
       <span class="block h-5 w-5 rotate-45 border-t-2 border-l-2 mt-2"></span>
     </a>
     <!-- back to top end -->
@@ -569,7 +634,20 @@
         backSpeed: 20, // Kecepatan penghapusan
         loop: true, // Mengulang teks secara terus-menerus
       });
+
+      const btn = document.querySelector(".custom-btn");
+
+      btn.addEventListener("mouseenter", () => {
+        const letBox = btn.querySelector(".let-box");
+        letBox.style.animationPlayState = "paused";
+      });
+
+      btn.addEventListener("mouseleave", () => {
+        const letBox = btn.querySelector(".let-box");
+        letBox.style.animationPlayState = "running";
+      });
     </script>
+    <script type="text/javascript" src="vanilla-tilt.min.js"></script>
     <script src="dist/js/script.js"></script>
   </body>
 </html>
