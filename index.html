@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio projek css</title>
     <link href="dist/css/yusuf.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script>
       //ini biar ketika buttom light & dark nya di di refresh buttom nya tidak berubah lagi jadi warna putih
       if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
@@ -175,6 +176,16 @@
         margin: auto;
         font-size: 2em;
       }
+
+      #messages {
+        margin-top: 20px;
+        border-top: 1px solid #ccc;
+        padding-top: 20px;
+      }
+      .user-message {
+        margin-bottom: 10px;
+      }
+      /* AOS*/
     </style>
   </head>
   <body>
@@ -244,7 +255,7 @@
             <h1 class="text-base font-semibold text-primary md:text-xl">Hallo Semua 😊 | <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white">I'm Yusuf Maulana</span></h1>
             <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Teacher & <span class="text-dark dark:text-white inline-block animate-fadeIn animate-fadeOut infinite duration-300">Web Developer</span></h2>
             <p class="font-medium text-secondary mb-10 leading-relaxed">Quotes <span class="text-emerald-400" id="input" style="color: rgb(52 211 153 / var(--tw-text-opacity)); --tw-text-opacity: 1"></span></p>
-            <a href="http://wa.me/6285694743168" class="vibrate-link">Hubungi Saya</a>
+            <a href="http://wa.me/6285694743168" class="vibrate-link" data-aos="fade-in">Hubungi Saya</a>
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="relative mt-10">
@@ -260,12 +271,12 @@
     <section id="about" class="pt-36 pb-32 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-10 lg:w-1/2">
+          <div class="w-full px-4 mb-10 lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
             <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya</h4>
             <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">Yuk, Belajar Web With YM Maulana</h2>
             <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae veritatis perspiciatis assumenda error, cumque repudiandae?</p>
           </div>
-          <div class="w-full px-4 lg:w-1/2">
+          <div class="w-full px-4 lg:w-1/2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
             <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Mari Join</h3>
             <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, quis! Pariatur odio illo et maxime! Praesentium, explicabo excepturi.</p>
             <div class="flex items-center">
@@ -336,44 +347,44 @@
         <h4 class="font-semibold text-lg text-primary mb-2">My Work</h4>
 
         <div class="work-list">
-          <div class="work">
-            <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
+          <div class="work" data-aos="fade-right" data-aos-duration="600">
+            <h4 class="font-semibold text-lg text-primary mb-2">Keyboard Projek</h4>
             <img src="dist/img/2.jpg" alt="logo sementara" />
             <div class="layer">
-              <h3 class="font-bold text-white">Social media app</h3>
+              <h3 class="font-bold text-white" style="border-radius: 5px; background-color: #455045">Social media app</h3>
               <p class="font-bold text-white">kerja nyata harus kita buktikan dari sekarang, laki laki itu harus balance dengan perkataan nyata</p>
               <a href="#">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
             </div>
           </div>
-          <div class="work">
-            <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
+          <div class="work" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">
+            <h4 class="font-semibold text-lg text-primary mb-2">My Office</h4>
             <img src="dist/img/Porttofolio.webp" alt="inii blom adda file" />
             <div class="layer">
-              <h3 class="font-bold text-white">online shooping app</h3>
+              <h3 class="font-bold text-white" style="border-radius: 5px; background-color: #455045">online shooping app</h3>
               <p class="font-bold text-white">belanja puas harga pas</p>
               <a href="#">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
             </div>
           </div>
-          <div class="work">
-            <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
+          <div class="work" data-aos="fade-right" data-aos-duration="2000">
+            <h4 class="font-semibold text-lg text-primary mb-2">Keyboaed Projek</h4>
             <img src="dist/img/2.jpg" alt="inii blom adda file" />
             <div class="layer">
-              <h3 class="font-bold text-white">online shooping app</h3>
+              <h3 class="font-bold text-white" style="border-radius: 5px; background-color: #455045">online shooping app</h3>
               <p class="font-bold text-white">belanja puas harga pas</p>
               <a href="#">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
             </div>
           </div>
-          <div class="work">
-            <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
+          <div class="work" data-aos="fade-right" data-aos-duration="3000">
+            <h4 class="font-semibold text-lg text-primary mb-2">My Office</h4>
             <img src="dist/img/Porttofolio.webp" alt="inii blom adda file" />
             <div class="layer">
-              <h3 class="font-bold text-white">online shooping app</h3>
+              <h3 class="font-bold text-white" style="border-radius: 5px; background-color: #455045">online shooping app</h3>
               <p class="font-bold text-white">belanja puas harga pas</p>
               <a href="#">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -386,7 +397,7 @@
     <!-- portofolio section end -->
     <!-- clients start -->
     <section id="clients" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-300">
-      <div class="container">
+      <div class="container" data-aos="fade-in" data-aos-duraction="2000">
         <div class="w-full px-4">
           <div class="mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Clients</h4>
@@ -400,13 +411,19 @@
               <img src="dist/img/Google_ G _Logo.svg.webp" alt="goggle" />
             </a>
             <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="dist/img/Microsoft_Excel_2013-2019_logo.svg.png" alt="goggle" />
+              <img src="dist/img/Python-logo-notext.svg.png" alt="goggle" />
             </a>
             <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="dist/img/Gojek_logo_2019.svg.png" alt="goggle" />
+              <img src="dist/img/1200px-Javascript_badge.svg.png" alt="goggle" />
             </a>
             <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-              <img src="dist/img/1200px-Shopee_logo.svg.png" alt="goggle" />
+              <img src="dist/img/Webysther_20160423_-_Elephpant.svg.png" alt="goggle" />
+            </a>
+            <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+              <img src="dist/img/Amazon_logo.svg.png" alt="goggle" />
+            </a>
+            <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+              <img src="dist/img/Alibaba_en_logo.svg.png" alt="goggle" />
             </a>
           </div>
         </div>
@@ -416,9 +433,9 @@
 
     <!-- VANILLA TILIT START -->
 
-    <div class="kotak" data-tilt>
+    <!--<div class="kotak" data-tilt>
       <h3>tulisan</h3>
-    </div>
+    </div>-->
     <!-- VANILLA TILIT END -->
     <!-- blog section start -->
     <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
@@ -472,8 +489,8 @@
     </section>
     <!-- blog section end -->
     <!-- Contact section start -->
-    <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
-      <div class="container">
+    <!-- <section id="contact" class="pt-36 pb-32 dark:bg-slate-800" id="notification">
+      <div class="container" id="messages">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Contcat</h4>
@@ -503,6 +520,42 @@
         </form>
       </div>
     </section>
+
+    <div>
+       Data akan di tampilkan -->
+    <!--</div>-->
+    <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Hubungi Kami</h2>
+            <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi exercitationem incidunt commodi dolorem quis quasi.</p>
+          </div>
+        </div>
+        <form id="contactForm">
+          <div class="w-full lg:w-2/3 lg:mx-auto">
+            <div class="w-full px-4 mb-8">
+              <label for="name" class="text-base font-bold text-primary">Nama</label>
+              <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
+            </div>
+
+            <div class="w-full px-4 mb-8">
+              <label for="email" class="text-base font-bold text-primary">Email</label>
+              <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
+            </div>
+            <div class="w-full px-4 mb-8">
+              <label for="message" class="text-base font-bold text-primary">Pesan</label>
+              <textarea type="message" id="message" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"></textarea>
+            </div>
+            <div class="w-full px-4">
+              <button id="sendMessage" class="text-base font-semibold text-white bg-primary py-3 px-7 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Kirim</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <!-- Contact section end -->
 
     <!-- Footer Start -->
@@ -626,6 +679,12 @@
     </a>
     <!-- back to top end -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- Setup and start animation! -->
     <script>
       var typed = new Typed("#input", {
@@ -646,6 +705,31 @@
         const letBox = btn.querySelector(".let-box");
         letBox.style.animationPlayState = "running";
       });
+
+      // Mengambil elemen formulir
+      const form = document.querySelector("form");
+
+      // Menambahkan event listener untuk menghandle pengiriman formulir
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Mencegah perilaku default pengiriman formulir
+
+        // Mendapatkan nilai dari input
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Di sini Anda bisa melakukan apa pun dengan data yang dikumpulkan, misalnya mengirimnya ke server atau menampilkan notifikasi
+        // Contoh notifikasi sederhana
+        const notification = document.getElementById("notification");
+        notification.innerText = "Data telah terkirim!";
+
+        // Bersihkan formulir setelah pengiriman data
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+      });
+
+      // Simpan pesan yang diberikan pengguna
     </script>
     <script type="text/javascript" src="vanilla-tilt.min.js"></script>
     <script src="dist/js/script.js"></script>
