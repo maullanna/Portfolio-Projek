@@ -1006,3 +1006,167 @@ body {
     width: 33.333333%;
   }
 }
+
+/*body {
+        overflow-x: hidden;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          overflow-x: hidden;
+        }
+      }*/
+
+#portofolio {
+  padding: 50px;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient (rgba(0, 0, 0, 0.6), #e31b59);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.layer a {
+  margin-top: 20px;
+  color: #c0f5da;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #1be37f;
+  width: 50px;
+  border-radius: 100%;
+  text-align: center;
+}
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 70%;
+}
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #010201;
+  padding: 11px 60px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: background 0.5s;
+  background-color: #29ca72;
+}
+
+/* Style Dasar Link */
+.vibrate-link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid #34d399;
+  border-radius: 15px;
+  background-color: #34d399;
+  font-size: 1rem;
+  box-shadow: 2px 5px #adadad;
+  animation: vibrate 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+  animation-delay: 0.7s; /*Delay sebelum animasi dimulai */
+}
+
+/* Animasi Bergetar */
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  10% {
+    transform: translate(-1px, 1px) rotate(-2deg);
+  }
+  20% {
+    transform: translate(1px, -2px) rotate(2deg);
+  }
+  30% {
+    transform: translate(-3px, 0) rotate(0);
+  }
+  40% {
+    transform: translate(3px, 2px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  60% {
+    transform: translate(2px, 1px) rotate(-1deg);
+  }
+  70% {
+    transform: translate(-1px, 2px) rotate(0);
+  }
+  80% {
+    transform: translate(1px, -1px) rotate(-1deg);
+  }
+  90% {
+    transform: translate(0, 3px) rotate(2deg);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.kotak {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 50px auto;
+  display: flex;
+}
+
+.kotak h3 {
+  margin: auto;
+  font-size: 2em;
+}
+
+#messages {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+.user-message {
+  margin-bottom: 10px;
+}
+/* AOS*/

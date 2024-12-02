@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="dist/css/yusuf.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <img src="dist/img/logo networking.png" alt="yusuf" style="width: 180px; height: auto" />
+
+          <div class="flex items-center px-4">
+            <button id="humberger" name="humberger" type="button" class="block absolute right-4 lg:hidden">
+              <span class="humberger-line transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="humberger-line transition duration-300 ease-in-out"></span>
+              <span class="humberger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 shadow-lg bg-white rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:dark:bg-transparent"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="page2.html" class="text-base text-white font-semibold py-2 mx-8 flex group-hover:text-primary dark:text-white">Home</a>
+                </li>
+                <li class="group">
+                  <a href="#about" class="text-base text-white font-semibold py-2 mx-8 flex group-hover:text-primary dark:text-white">Produk</a>
+                </li>
+                <li class="group">
+                  <a href="#portofolio" class="text-base text-white font-semibold py-2 mx-8 flex group-hover:text-primary dark:text-white">Tentang Kami</a>
+                </li>
+                <li class="group">
+                  <a href="#clients" class="text-base text-white font-semibold py-2 mx-8 flex group-hover:text-primary dark:text-white">clients</a>
+                </li>
+                <li class="group">
+                  <a href="#blog" class="text-base text-white font-semibold py-2 mx-8 flex group-hover:text-primary dark:text-white">Kontak</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="home" class="pt-36 dark:bg-dark">
+      <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <source src="dist/video/city_background_loop.compressed.3de6b386.mp4" type="video/mp4" />
+      </video>
+      <div class="container relative z-10 pt-36 mt-10">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1><span></span></h1>
+          </div>
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

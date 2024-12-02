@@ -13,6 +13,7 @@ module.exports = {
         secondary: "#64748b",
         dark: "#020617",
         orange: "#ea580c",
+        putihTulang: "#f8f1e4",
       },
       screens: {
         "2xl": "1320px",

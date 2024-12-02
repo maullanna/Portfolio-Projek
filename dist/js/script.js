@@ -51,4 +51,16 @@ if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.match
 } else {
   darkToggle.checked = false;
 }
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("header");
 
+  if (window.scrollY > 50) {
+    // Jika scroll melebihi 50px
+    header.classList.remove("bg-transparent");
+    header.classList.add("bg-white");
+  } else {
+    // Jika kembali ke atas
+    header.classList.remove("bg-white");
+    header.classList.add("bg-transparent");
+  }
+});

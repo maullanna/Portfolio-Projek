@@ -23,179 +23,19 @@
       });
     </script>
     <style>
-      /*body {
-        overflow-x: hidden;
+      header.bg-white {
+        background-color: rgba(255, 255, 255, 0.8); /* Putih dengan opacity 80% */
+        transition: background-color 0.3s ease;
       }
-
-      @media (max-width: 768px) {
-        body {
-          overflow-x: hidden;
-        }
-      }*/
-
-      #portofolio {
-        padding: 50px;
-      }
-
-      .work-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 40px;
-        margin-top: 50px;
-      }
-
-      .work {
-        border-radius: 10px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .work img {
-        width: 100%;
-        border-radius: 15px;
-        display: block;
-        transition: transform 0.5s;
-      }
-      .layer {
-        width: 100%;
-        height: 0;
-        background: linear-gradient (rgba(0, 0, 0, 0.6), #e31b59);
-        border-radius: 10px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 0 40px;
-        text-align: center;
-        font-size: 14px;
-        transition: height 0.5s;
-      }
-      .layer h3 {
-        font-weight: 500;
-        margin-bottom: 20px;
-      }
-
-      .layer a {
-        margin-top: 20px;
-        color: #c0f5da;
-        text-decoration: none;
-        font-size: 18px;
-        line-height: 60px;
-        background: #1be37f;
-        width: 50px;
-        border-radius: 100%;
-        text-align: center;
-      }
-      .work:hover img {
-        transform: scale(1.1);
-      }
-
-      .work:hover .layer {
-        height: 70%;
-      }
-      .btn {
-        display: block;
-        margin: 50px auto;
-        width: fit-content;
-        border: 1px solid #010201;
-        padding: 11px 60px;
-        border-radius: 6px;
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        transition: background 0.5s;
-        background-color: #29ca72;
-      }
-
-      /* Style Dasar Link */
-      .vibrate-link {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 16px;
-        text-decoration: none;
-        color: #ffffff;
-        border: 2px solid #34d399;
-        border-radius: 15px;
-        background-color: #34d399;
-        font-size: 1rem;
-        box-shadow: 2px 5px #adadad;
-        animation: vibrate 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-        animation-delay: 0.7s; /*Delay sebelum animasi dimulai */
-      }
-
-      /* Animasi Bergetar */
-
-      @keyframes vibrate {
-        0% {
-          transform: translate(0);
-        }
-        10% {
-          transform: translate(-1px, 1px) rotate(-2deg);
-        }
-        20% {
-          transform: translate(1px, -2px) rotate(2deg);
-        }
-        30% {
-          transform: translate(-3px, 0) rotate(0);
-        }
-        40% {
-          transform: translate(3px, 2px) rotate(1deg);
-        }
-        50% {
-          transform: translate(-1px, -1px) rotate(1deg);
-        }
-        60% {
-          transform: translate(2px, 1px) rotate(-1deg);
-        }
-        70% {
-          transform: translate(-1px, 2px) rotate(0);
-        }
-        80% {
-          transform: translate(1px, -1px) rotate(-1deg);
-        }
-        90% {
-          transform: translate(0, 3px) rotate(2deg);
-        }
-        100% {
-          transform: translate(0);
-        }
-      }
-
-      .kotak {
-        width: 200px;
-        height: 200px;
-        background-color: lightblue;
-        margin: 50px auto;
-        display: flex;
-      }
-
-      .kotak h3 {
-        margin: auto;
-        font-size: 2em;
-      }
-
-      #messages {
-        margin-top: 20px;
-        border-top: 1px solid #ccc;
-        padding-top: 20px;
-      }
-      .user-message {
-        margin-bottom: 10px;
-      }
-      /* AOS*/
     </style>
   </head>
   <body>
     <!-- Header Star -->
-    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+    <header id="header" class="bg-white absolute top-0 left-0 w-full flex items-center z-10">
       <div class="container">
         <div class="flex items-center justify-between relative">
-          <div class="px-4 ml-5">
-            <img src="dist/img/YM1-removebg-preview_1_-removebg-preview.png" alt="yusuf" style="width: 70px; height: 55px" />
-          </div>
+          <img src="dist/img/Diskon__21_-removebg-preview.png" alt="yusuf" style="width: 150px; height: auto" />
+
           <div class="flex items-center px-4">
             <button id="humberger" name="humberger" type="button" class="block absolute right-4 lg:hidden">
               <span class="humberger-line transition duration-300 ease-in-out origin-top-left"></span>
@@ -203,40 +43,22 @@
               <span class="humberger-line transition duration-300 ease-in-out origin-bottom-left"></span>
             </button>
 
-            <nav
-              id="nav-menu"
-              class="hidden absolute py-5 shadow-lg bg-white rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:dark:bg-transparent"
-            >
+            <nav id="nav-menu" class="hidden absolute py-5 shadow-lg bg-white rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
               <ul class="block lg:flex">
                 <li class="group">
-                  <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Beranda</a>
+                  <a href="page2.html" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-primary">Home</a>
                 </li>
                 <li class="group">
-                  <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Tentang saya</a>
+                  <a href="#about" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-primary">Produk</a>
                 </li>
                 <li class="group">
-                  <a href="#portofolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portfolio</a>
+                  <a href="#portofolio" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-primary">Tentang Kami</a>
                 </li>
                 <li class="group">
-                  <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">clients</a>
+                  <a href="#clients" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-primary">clients</a>
                 </li>
                 <li class="group">
-                  <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Blog</a>
-                </li>
-                <li class="group">
-                  <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white :">Contact</a>
-                </li>
-                <li class="flex items-center pl-8">
-                  <div class="flex">
-                    <span class="mr-2 text-sm text-slate-500">Light</span>
-                    <input type="checkbox" class="hidden" id="dark-toggle" />
-                    <label for="dark-toggle">
-                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
-                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
-                      </div>
-                    </label>
-                    <span class="ml-2 text-sm text-slate-500">Dark</span>
-                  </div>
+                  <a href="#blog" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-primary">Kontak</a>
                 </li>
               </ul>
             </nav>
@@ -244,23 +66,23 @@
         </div>
       </div>
     </header>
+
     <!-- Header End -->
 
     <!-- Hero Section Start -->
     <section id="home" class="pt-36 dark:bg-dark">
-      <div class="container">
+      <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <source src="dist/video/intro_loop.compressed.dbf19dad.mp4" type="video/mp4" />
+      </video>
+      <div class="container relative z-10 pt-36 mt-10">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
             <h1><span></span></h1>
-            <h1 class="text-base font-semibold text-primary md:text-xl">Hallo Semua 😊 | <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white">I'm Yusuf Maulana</span></h1>
-            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Teacher & <span class="text-dark dark:text-white inline-block animate-fadeIn animate-fadeOut infinite duration-300">Web Developer</span></h2>
-            <p class="font-medium text-secondary mb-10 leading-relaxed">Quotes <span class="text-emerald-400" id="input" style="color: rgb(52 211 153 / var(--tw-text-opacity)); --tw-text-opacity: 1"></span></p>
-            <a href="http://wa.me/6285694743168" class="vibrate-link" data-aos="fade-in">Hubungi Saya</a>
+            <h1 class="text-base text-white font-semibold md:text-xl">Solusi Jaringan dan Teknologi <span class="block font-bold text-white text-4xl mt-1 lg:text-5xl dark:text-white">Untuk Kampus Masa Depan</span></h1>
+            <p class="font-medium text-secondary mb-10 leading-relaxed"><span class="text-emerald-400 font-bold text-md" id="input" style="color: rgb(52 211 153 / var(--tw-text-opacity)); --tw-text-opacity: 1"></span></p>
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
-            <div class="relative mt-10">
-              <img src="dist/img/Yusuf.png.png" alt="yusuf" class="max-w-full mx-auto" style="border-radius: 15px" />
-            </div>
+            <div class="relative mt-10"></div>
           </div>
         </div>
       </div>
@@ -270,7 +92,7 @@
     <!-- About section start-->
     <section id="about" class="pt-36 pb-32 dark:bg-dark">
       <div class="container">
-        <div class="flex flex-wrap">
+        <div class="flex flex-wrap pt-36 mt-10">
           <div class="w-full px-4 mb-10 lg:w-1/2" data-aos="fade-dawn" data-aos-duration="1000">
             <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya</h4>
             <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">Yuk, Belajar Web With YM Maulana</h2>
@@ -688,7 +510,7 @@
     <!-- Setup and start animation! -->
     <script>
       var typed = new Typed("#input", {
-        strings: ["Lebih Baik Menahan sulit nya Belajar Dari pada.", "  Menahan perih nya Kebodohan."],
+        strings: ["Ubah Computer Jaringan Anda Dengan NetCampus", " Dan TechCampus."],
         typeSpeed: 80,
         backSpeed: 20, // Kecepatan penghapusan
         loop: true, // Mengulang teks secara terus-menerus
