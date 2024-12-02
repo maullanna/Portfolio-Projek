@@ -14,6 +14,7 @@ module.exports = {
         dark: "#020617",
         orange: "#ea580c",
         putihTulang: "#f8f1e4",
+        blue: "#2a6ef2",
       },
       screens: {
         "2xl": "1320px",
