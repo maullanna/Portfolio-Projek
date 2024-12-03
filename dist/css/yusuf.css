@@ -19,6 +19,39 @@ hr {
   color: inherit;
   border-top-width: 1px;
 }
+
+.pesan-sekarang-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  color: #007bff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.pesan-sekarang-btn:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.pesan-sekarang-btn:active {
+  transform: translateY(2px);
+}
+
+section img {
+  max-width: 90%; /* Adjust the width to 90% of the container */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Remove any space below the image */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
