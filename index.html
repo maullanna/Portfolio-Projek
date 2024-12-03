@@ -60,14 +60,28 @@
                 <li class="group">
                   <a href="page2.html" style="font-family: Poppins, sans-serif" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-blue-600">Beranda</a>
                 </li>
-                <li class="group">
-                  <a href="#about" style="font-family: Poppins, sans-serif" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-blue-600">Layanan</a>
+                <li class="relative">
+                  <button id="dropdownButton" class="text-base text-black font-semibold py-2 px-4 border border-gray-300 rounded-lg hover:bg-blue-100 focus:outline-none">
+                    Layanan
+                    <svg class="inline-block ml-2 w-4 h-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </button>
+                  <ul id="dropdownMenu" class="absolute left-0 hidden bg-white text-black text-sm shadow-lg rounded-lg w-48 mt-2 border-t border-gray-300">
+                    <li>
+                      <a href="netcampus.html" style="font-family: Poppins, sans-serif" class="block py-2 px-4 hover:bg-blue-100">NetCampus</a>
+                    </li>
+                    <li>
+                      <a href="#techcampus" style="font-family: Poppins, sans-serif" class="block py-2 px-4 hover:bg-blue-100">TechCampus</a>
+                    </li>
+                  </ul>
                 </li>
+
                 <li class="group">
                   <a href="#portofolio" style="font-family: Poppins, sans-serif" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-blue-600">Kontak</a>
                 </li>
                 <li class="group">
-                  <a href="#clients" style="font-family: Poppins, sans-serif" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-blue-600">Profil</a>
+                  <a href="profil.html" style="font-family: Poppins, sans-serif" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-blue-600">Profil</a>
                 </li>
               </ul>
             </nav>
@@ -481,6 +495,24 @@
       });
 
       // Simpan pesan yang diberikan pengguna
+    </script>
+
+    <script>
+      // Mendapatkan tombol dan dropdown menu
+      const dropdownButton = document.getElementById("dropdownButton");
+      const dropdownMenu = document.getElementById("dropdownMenu");
+
+      // Fungsi untuk toggle dropdown menu
+      dropdownButton.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("hidden");
+      });
+
+      // Optional: Menutup dropdown jika mengklik di luar area dropdown
+      document.addEventListener("click", (event) => {
+        if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+          dropdownMenu.classList.add("hidden");
+        }
+      });
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
 
