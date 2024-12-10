@@ -39,6 +39,19 @@
         font-feature-settings: normal;
         font-variation-settings: normal;
       }
+
+      section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .responsive-img {
+        width: 100%; /* Memenuhi lebar elemen */
+        height: auto; /* Menjaga aspek rasio */
+        display: block; /* Menghindari spasi ekstra */
+        image-rendering: auto; /* Menggunakan rendering default */
+      }
     </style>
   </head>
   <body>
@@ -58,7 +71,7 @@
             <nav id="nav-menu" class="hidden absolute py-5 shadow-lg bg-white rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
               <ul class="block lg:flex">
                 <li class="group">
-                  <a href="page2.html" style="font-family: Poppins, sans-serif" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-blue-600">Beranda</a>
+                  <a href="index.html" style="font-family: Poppins, sans-serif" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-blue-600">Beranda</a>
                 </li>
                 <li class="relative">
                   <button id="dropdownButton" class="text-base text-black font-semibold py-2 px-4 border border-gray-300 rounded-lg hover:bg-blue-100 focus:outline-none">
@@ -72,7 +85,7 @@
                       <a href="netcampus.html" style="font-family: Poppins, sans-serif" class="block py-2 px-4 hover:bg-blue-100">NetCampus</a>
                     </li>
                     <li>
-                      <a href="techcampus.html" style="font-family: Poppins, sans-serif" class="block py-2 px-4 hover:bg-blue-100">TechCampus</a>
+                      <a href="" style="font-family: Poppins, sans-serif" class="block py-2 px-4 hover:bg-blue-100">TechCampus</a>
                     </li>
                   </ul>
                 </li>
@@ -95,14 +108,17 @@
     <!-- Hero Section Start -->
     <section id="home" class="pt-36 dark:bg-dark">
       <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
-        <source src="dist/video/intro_loop.compressed.dbf19dad.mp4" type="video/mp4" />
+        <source src="dist/video/Section-02-2.d4d60179.mp4" type="video/mp4" />
       </video>
       <div class="container relative z-10 pt-36 mt-10">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
             <h1><span></span></h1>
-            <h1 class="text-base font-semibold text-primary md:text-xl" style="font-family: Poppins, sans-serif"><span class="block font-bold text-white text-4xl mt-1 lg:text-5xl dark:text-white">PT NetCampus Nusantara</span></h1>
-            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl"><span class="text-white dark:text-white inline-block animate-fadeIn animate-fadeOut infinite duration-300 mt-1">Teknologi Kampus Masa Depan</span></h2>
+            <h1 class="text-base font-semibold text-primary md:text-xl" style="font-family: Poppins, sans-serif"><span class="block font-bold text-white text-4xl mt-1 lg:text-5xl dark:text-white">NetCampus</span></h1>
+            <h2 class="font-medium text-secondary text-lg mb-2 lg:text-2xl">
+              <span style="font-family: Poppins, sans-serif" class="text-white dark:text-white inline-block animate-fadeIn animate-fadeOut infinite duration-300 mt-1">Solusi Jaringan Komputer Terbaik untuk Kampus Anda</span>
+            </h2>
+            <p class="text-base font-medium text-white" style="font-family: Poppins, sans-serif">Pemasangan, Pengelolaan, dan Keamanan Jaringan Kampus Anda dengan Teknisi Profesional</p>
             <a href="http://wa.me/6285694743168" class="pesan-sekarang-btn">Pesan Sekarang</a>
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
@@ -111,8 +127,9 @@
         </div>
       </div>
     </section>
-    <!-- Hero Section end -->
 
+    <section><img src="dist/img/net 3.svg" class="responsive-img" alt="" /></section>
+    <!-- Hero Section end -->
     <!-- About section start-->
 
     <!-- About section End -->
@@ -179,7 +196,7 @@
     </section>-->
     <!-- portofolio section end -->
     <!-- clients start -->
-    <section id="clients" class="pt-36 pb-32 mt-20 bg-slate-800 dark:bg-slate-300">
+    <section id="clients" class="pt-36 pb-32 mt-20 bg-slate-800 dark:bg-slate-100">
       <div class="container" data-aos="fade-in" data-aos-duraction="3000">
         <div class="w-full px-4">
           <div class="mx-auto text-center mb-16">
@@ -190,7 +207,7 @@
         </div>
         <div class="w-full px-4">
           <div class="flex flex-wrap items-center justify-center">
-            <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+            <a href="#" class="max-w-[120px] mx-4 py-4 grayscale-0 opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
               <img src="dist/img/cisco.svg" alt="goggle" />
             </a>
             <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
@@ -219,76 +236,6 @@
     </div>-->
     <!-- VANILLA TILIT END -->
     <!-- blog section start -->
-    <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
-      <div class="container" data-aos="fade-in" data-aos-duraction="2000">
-        <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-blue-600 mb-2" style="font-family: Poppins, sans-serif">Blog</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white" style="font-family: Poppins, sans-serif">Inspirasi Teknologi</h2>
-            <p class="font-medium text-md text-secondary md:text-lg" style="font-family: Poppins, sans-serif">Artikel eksklusif dari NetCampus Nusantara seputar teknologi terkini, jaringan komputer, dan pengembangan SDM digital.</p>
-          </div>
-        </div>
-        <div class="flex flex-wrap">
-          <!-- Artikel 1 -->
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="mb-10 bg-white rounded-xl shadow-lg overflow-hidden dark:bg-slate-800">
-              <img src="dist/img/dasar.jpg" alt="Dasar Networking" class="w-full" />
-              <div class="py-8 px-6">
-                <h3>
-                  <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Dasar-dasar Networking</a>
-                </h3>
-                <p class="font-medium text-base text-secondary mb-6">Pelajari topologi jaringan, perangkat keras, dan protokol penting yang menjadi fondasi jaringan komputer modern.</p>
-                <a
-                  href="https://example.com/network-basics"
-                  target="_blank"
-                  class="font-medium text-sm text-white bg-gradient-to-r from-blue-600 to-cyan-500 py-3 px-4 rounded-lg hover:opacity-80 transition-all duration-300"
-                  style="font-family: Poppins, sans-serif"
-                  >Baca Selengkapnya</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- Artikel 2 -->
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
-              <img src="dist/img/Security.png" alt="Keamanan Jaringan" class="w-full" />
-              <div class="py-8 px-6">
-                <h3>
-                  <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Keamanan Siber untuk Era Digital</a>
-                </h3>
-                <p class="font-medium text-base text-secondary mb-6">Lindungi data penting Anda dari ancaman siber dengan teknik keamanan terkini yang wajib dikuasai setiap profesional IT.</p>
-                <a
-                  href="https://example.com/network-security"
-                  target="_blank"
-                  class="font-medium text-sm text-white bg-gradient-to-r from-blue-600 to-cyan-500 py-3 px-4 rounded-lg hover:opacity-80 transition-all duration-300"
-                  style="font-family: Poppins, sans-serif"
-                  >Baca Selengkapnya</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- Artikel 3 -->
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
-              <img src="dist/img/gaji-profesi-it_169.jpeg" alt="Edukasi Teknologi" class="w-full mb-10" />
-              <div class="py-8 px-6">
-                <h3>
-                  <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Meningkatkan Skill IT Anda</a>
-                </h3>
-                <p class="font-medium text-base text-secondary mb-6">Temukan program pelatihan dan sertifikasi IT terbaik untuk mempercepat karir Anda di dunia digital dan Computer Jaringan.</p>
-                <a
-                  href="https://example.com/tech-education"
-                  target="_blank"
-                  class="font-medium text-sm text-white bg-gradient-to-r from-blue-600 to-cyan-500 py-3 px-4 rounded-lg hover:opacity-80 transition-all duration-300"
-                  style="font-family: Poppins, sans-serif"
-                  >Baca Selengkapnya</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- blog section end -->
     <!-- Contact section start -->
