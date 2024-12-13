@@ -7,23 +7,58 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              poppins: ["Poppins", "sans-serif"],
-            },
-          },
-        },
-      };
+      if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+
+      //animasi text
+      document.addEventListener("DOMContentLoaded", function () {
+        new TypeIt("#typing", {
+          strings: ["This is my string!"],
+        }).go();
+      });
     </script>
+    <style>
+      header.bg-white {
+        background-color: rgba(255, 255, 255, 0.8); /* Putih dengan opacity 80% */
+        transition: background-color 0.3s ease;
+      }
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        font-family: "Poppins", sans-serif; /* Mengganti font menjadi Poppins */
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+      }
+    </style>
+    <style>
+      header.bg-white {
+        background-color: rgba(255, 255, 255, 0.8); /* Putih dengan opacity 80% */
+        transition: background-color 0.3s ease;
+      }
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        font-family: "Poppins", sans-serif; /* Mengganti font menjadi Poppins */
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+      }
+    </style>
   </head>
-  <body class="font-poppins bg-gray-50">
-    <!-- Header -->
-    <header id="header" class="bg-white opacity-80 absolute top-0 left-0 w-full flex items-center z-10">
+  <body>
+    <!-- Header Star -->
+    <header id="header" class="bg-white absolute top-0 left-0 w-full flex items-center z-10">
       <div class="container">
         <div class="flex items-center justify-between relative">
-          <img src="dist/img/Diskon__21_-removebg-preview.png" alt="yusuf" style="width: 150px; height: auto" />
+          <img src="dist/img/baru net.png" alt="yusuf" style="width: 150px; height: auto" />
 
           <div class="flex items-center px-4">
             <button id="humberger" name="humberger" type="button" class="block absolute right-4 lg:hidden">
@@ -37,9 +72,6 @@
                 <li class="group">
                   <a href="index.html" style="font-family: Poppins, sans-serif" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-blue-600">Beranda</a>
                 </li>
-                <li class="group">
-                  <a href="profil.html" style="font-family: Poppins, sans-serif" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-blue-600">Profil</a>
-                </li>
                 <li class="relative">
                   <button id="dropdownButton" style="font-family: Poppins, sans-serif" class="text-base text-black font-semibold py-2 px-4 border border-gray-300 rounded-lg hover:bg-blue-100 focus:outline-none">
                     Layanan
@@ -49,7 +81,7 @@
                   </button>
                   <ul id="dropdownMenu" class="absolute left-0 hidden bg-white text-black text-sm shadow-lg rounded-lg w-48 mt-2 border-t border-gray-300">
                     <li>
-                      <a href="netcampus.html" style="font-family: Poppins, sans-serif" class="block py-2 px-4 hover:bg-blue-100">NetCampus</a>
+                      <a href="#" style="font-family: Poppins, sans-serif" class="block py-2 px-4 hover:bg-blue-100">NetCampus</a>
                     </li>
                     <li>
                       <a href="techcampus.html" style="font-family: Poppins, sans-serif" class="block py-2 px-4 hover:bg-blue-100">TechCampus</a>
@@ -60,6 +92,9 @@
                 <li class="group">
                   <a href="#portofolio" style="font-family: Poppins, sans-serif" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-blue-600">Kontak</a>
                 </li>
+                <li class="group">
+                  <a href="profil.html" style="font-family: Poppins, sans-serif" class="text-base text-black font-semibold py-2 mx-8 flex group-hover:text-blue-600">Profil</a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -69,7 +104,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="pt-30 dark:bg-dark">
-      <img src="dist/img/Group 3586 (2).jpg" alt="" />
+      <img src="dist/img/Group 3586 (1).jpg" alt="" />
     </section>
 
     <!-- Brand Products Section -->
@@ -266,13 +301,38 @@
       const dropdownMenu = document.getElementById("dropdownMenu");
 
       // Fungsi untuk toggle dropdown menu
-      dropdownButton.addEventListener("click", () => {
+      dropdownButton.addEventListener("click", (e) => {
+        e.stopPropagation(); // Mencegah penutupan saat klik di dalam menu
         dropdownMenu.classList.toggle("hidden");
       });
 
       // Optional: Menutup dropdown jika mengklik di luar area dropdown
       document.addEventListener("click", (event) => {
         if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+          dropdownMenu.classList.add("hidden");
+        }
+      });
+
+      ///toogglee
+
+      // Toggle Menu untuk Hamburger
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden"); // Toggle antara hidden dan visible
+      });
+
+      // Dropdown Menu Toggle
+
+      dropdownButton.addEventListener("click", (e) => {
+        e.stopPropagation(); // Mencegah penutupan saat klik di dalam menu
+        dropdownMenu.classList.toggle("hidden");
+      });
+
+      // Menutup dropdown jika klik di luar
+      document.addEventListener("click", () => {
+        if (!dropdownMenu.classList.contains("hidden")) {
           dropdownMenu.classList.add("hidden");
         }
       });
